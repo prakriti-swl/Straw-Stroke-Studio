@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 
   <main class="main">
 
@@ -18,7 +19,7 @@
       <nav class="breadcrumbs">
         <div class="container">
           <ol>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li class="current">Gallery</li>
           </ol>
         </div>
@@ -38,8 +39,8 @@
             <div class="gallery-item h-100">
               <img src="{% url ' gallery.image.url' %}" class="img-fluid" alt="">
               <div class="gallery-links d-flex align-items-center justify-content-center">
-                <a href="assets/img/gallery/gallery-1.jpg" title="Gallery 1" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                <a href="{% url 'gallery.image.url' %}" title="Gallery 1" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
+                <a href="{% url 'gallery_detail' post.pk %}" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div>
           </div><!-- End Gallery Item -->
@@ -51,4 +52,4 @@
 
     </section><!-- /Gallery Section -->
 
-  </main>>
+  </main>

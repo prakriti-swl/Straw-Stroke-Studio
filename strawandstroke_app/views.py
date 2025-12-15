@@ -6,6 +6,12 @@ from .models import Gallery
 class HomeView(TemplateView):
     template_name = "index.html"
 
+class IntroView(TemplateView):
+    template_name = "home/intro.html"
+
+class AboutView(TemplateView):
+    template_name = "about.html"
+
 class GalleryView(TemplateView):
     model = Gallery
     template_name = "gallery.html"
